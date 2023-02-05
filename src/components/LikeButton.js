@@ -19,9 +19,7 @@ const LikeButton = () => {
 
   return (
     <div>
-      <button onClick={count1} style={{ backgroundColor: `${rand(bg)}` }}>
-        {counter} Likes
-      </button>
+      <button onClick={count1} style={{ backgroundColor: `${rand(bg)}` }}>{counter} Likes </button>
       <button onClick={count2} style={{ backgroundColor: `${rand(bg)}` }}>{counter2} Likes</button>
     </div>
   );

@@ -8,8 +8,23 @@ import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
-
+import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import NumbersTable from './components/NumbersTable';
+import profiles from './data/berlin.json';
+import Facebook from './components/Facebook';
+import SignupPage from './components/SignupPage';
+import RGBColorPicker from './components/RGBColorPicker';
 function App() {
+  const images = [
+    '/dice1.png',
+    '/dice2.png',
+    '/dice3.png',
+    '/dice4.png',
+    '/dice5.png',
+    '/dice6.png',
+  ];
+  const empty = '/dice-empty.png';
   return (
     <div className="App">
       <IdCard
@@ -105,6 +120,15 @@ function App() {
       />
 
       <LikeButton />
+      <ClickablePicture />
+      <Dice images={images} empty={empty} />
+      <NumbersTable limit={12} />
+      <Facebook profiles={profiles} />
+      <br />
+      <SignupPage />
+      <br />
+
+      <RGBColorPicker />
     </div>
   );
 }
